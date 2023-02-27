@@ -1,0 +1,6 @@
+# Project exclude paths
+/hospital-api/target/
+/hospital-domain/target/
+/hospital-infrastructure/target/
+/hospital-service/target/
+/hospital-web/target/

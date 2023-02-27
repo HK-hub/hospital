@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.hospital.infrastructure.mapper.DoctorPrescriptionMapper">
+
+    <resultMap id="BaseResultMap" type="com.zy.hospital.entity.DoctorPrescription">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+            <result property="patientCardId" column="patient_card_id" jdbcType="INTEGER"/>
+            <result property="diagnosis" column="diagnosis" jdbcType="VARCHAR"/>
+            <result property="subDeptId" column="sub_dept_id" jdbcType="INTEGER"/>
+            <result property="doctorId" column="doctor_id" jdbcType="INTEGER"/>
+            <result property="registrationId" column="registration_id" jdbcType="INTEGER"/>
+            <result property="rp" column="rp" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uuid,patient_card_id,
+        diagnosis,sub_dept_id,doctor_id,
+        registration_id,rp
+    </sql>
+</mapper>

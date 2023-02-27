@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.hospital.infrastructure.mapper.DoctorConsultMapper">
+
+    <resultMap id="BaseResultMap" type="com.zy.hospital.entity.DoctorConsult">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="patientCardId" column="patient_card_id" jdbcType="INTEGER"/>
+            <result property="subDeptId" column="sub_dept_id" jdbcType="INTEGER"/>
+            <result property="doctorId" column="doctor_id" jdbcType="INTEGER"/>
+            <result property="startTime" column="start_time" jdbcType="DATE"/>
+            <result property="endTime" column="end_time" jdbcType="DATE"/>
+            <result property="outTradeNo" column="out_trade_no" jdbcType="VARCHAR"/>
+            <result property="amount" column="amount" jdbcType="DECIMAL"/>
+            <result property="prepayId" column="prepay_id" jdbcType="VARCHAR"/>
+            <result property="transactionId" column="transaction_id" jdbcType="VARCHAR"/>
+            <result property="paymentStatus" column="payment_status" jdbcType="TINYINT"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="files" column="files" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="DATE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,patient_card_id,sub_dept_id,
+        doctor_id,start_time,end_time,
+        out_trade_no,amount,prepay_id,
+        transaction_id,payment_status,status,
+        files,create_time
+    </sql>
+</mapper>

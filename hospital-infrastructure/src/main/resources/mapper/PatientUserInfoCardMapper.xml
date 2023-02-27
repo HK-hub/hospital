@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.hospital.infrastructure.mapper.PatientUserInfoCardMapper">
+
+    <resultMap id="BaseResultMap" type="com.zy.hospital.entity.PatientUserInfoCard">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="VARCHAR"/>
+            <result property="pid" column="pid" jdbcType="VARCHAR"/>
+            <result property="tel" column="tel" jdbcType="VARCHAR"/>
+            <result property="birthday" column="birthday" jdbcType="DATE"/>
+            <result property="medicalHistory" column="medical_history" jdbcType="VARCHAR"/>
+            <result property="insuranceType" column="insurance_type" jdbcType="VARCHAR"/>
+            <result property="existFaceModel" column="exist_face_model" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,uuid,
+        name,sex,pid,
+        tel,birthday,medical_history,
+        insurance_type,exist_face_model
+    </sql>
+</mapper>

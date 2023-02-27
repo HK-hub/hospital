@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.hospital.infrastructure.mapper.DoctorWorkPlanMapper">
+
+    <resultMap id="BaseResultMap" type="com.zy.hospital.entity.DoctorWorkPlan">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="doctorId" column="doctor_id" jdbcType="INTEGER"/>
+            <result property="deptSubId" column="dept_sub_id" jdbcType="INTEGER"/>
+            <result property="date" column="date" jdbcType="DATE"/>
+            <result property="maximum" column="maximum" jdbcType="SMALLINT"/>
+            <result property="num" column="num" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,doctor_id,dept_sub_id,
+        date,maximum,num
+    </sql>
+</mapper>
